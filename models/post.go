@@ -19,16 +19,3 @@ type PostTag struct {
 	PostID uint `gorm:"primaryKey"`
 	TagID  uint `gorm:"primaryKey"`
 }
-
-func GetPostByID(id uint) *Post {
-	var post *Post
-	DB.Model(&Post{}).Where("id = ?", id).First(post)
-	return post
-}
-
-func CreatePost(post *Post) (*Post, error) {
-	if res := DB.Create(post); res.Error != nil {
-		return nil, res.Error
-	}
-	return post, nil
-}

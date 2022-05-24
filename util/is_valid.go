@@ -8,6 +8,7 @@ import (
 type SerID struct {
 }
 
+// 验证id是否合法, 并转化为uint类型
 func (s *SerID) ConvertType(id string) (uint, error) {
 	intId, err := strconv.Atoi(id)
 	if err != nil {
