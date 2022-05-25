@@ -6,6 +6,9 @@ const (
 	SERVERERROR     = 500
 	ID_IS_NOT_EXIST = 1001
 	Create_ERROR    = 1002
+	Auth_Error      = 1003
+	Auth_Expire     = 1004
+	DeCode_Error    = 1005
 )
 
 var MsgFlags = map[int]string{
@@ -14,4 +17,7 @@ var MsgFlags = map[int]string{
 	SERVERERROR:     "服务器错误",
 	ID_IS_NOT_EXIST: "id不存在",
 	Create_ERROR:    "创建失败",
+	Auth_Error:      "认证失败",
+	Auth_Expire:     "认证过期",
+	DeCode_Error:    "解码失败",
 }

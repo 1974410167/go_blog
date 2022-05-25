@@ -22,6 +22,6 @@ func InitDB() {
 		log.Fatalln(err)
 	}
 	fmt.Println("启动...............................")
-	db.AutoMigrate(&Post{}, &Category{}, &Tag{})
+	db.AutoMigrate(&Post{}, &Category{}, &Tag{}, &User{})
 	DB = db
 }
